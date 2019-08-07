@@ -1,0 +1,45 @@
+{
+  "name": "API",
+  "version": "1.0.0",
+  "description": "API For my Blog",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && mkdir dist && babel src -s -d dist",
+    "clean": "rm -rf dist",
+    "lint": "eslint --fix src",
+    "start": "npm run build && node bin/prod",
+    "dev": "nodemon --exec babel-node bin/dev",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "author": "DSK",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.0.0",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "express-promise-router": "^3.0.3",
+    "express-session": "^1.16.2",
+    "helmet": "^3.20.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "md5": "^2.2.1",
+    "mongoose": "^5.6.7",
+    "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "validator": "^11.1.0"
+  }
+}
